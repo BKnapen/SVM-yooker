@@ -1,0 +1,254 @@
+
+//Font family
+$font-family-base: 'PT Sans', sans-serif !default;
+$font-size-base: 1rem;
+$line-height-base: 1.6;
+
+//Fontawesome path
+$fa-font-path: "./assets/fonts";
+
+// Color system
+
+$theme_color_red: #062c41;
+$theme_color_green: #5DFDCB;
+$theme_color_blue: #062c41;
+$theme_color_light_blue: #47c1f1;
+
+$theme_color_gray: #d7d7d7;
+$theme_color_westar_tint: #e5e4df;
+$theme_color_wafer: #dfcfc2;
+$theme_color_green_spring: #b0b9a8;
+
+// scss-docs-start gray-color-variables
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+// scss-docs-end gray-color-variables
+
+// fusv-disable
+// scss-docs-start gray-colors-map
+$grays: (
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+) !default;
+// scss-docs-end gray-colors-map
+// fusv-enable
+
+// scss-docs-start color-variables
+$blue:    #0d6efd !default;
+$indigo:  #6610f2 !default;
+$purple:  #360D40 !default;
+$pink:    #d63384 !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ccff00 !default;
+$green:   #198754 !default;
+$teal:    #20c997 !default;
+$cyan:    #0dcaf0 !default;
+// scss-docs-end color-variables
+
+// scss-docs-start colors-map
+$colors: (
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "black":      $black,
+  "white":      $white,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+) !default;
+// scss-docs-end colors-map
+
+// scss-docs-start theme-color-variables
+$primary:       $theme_color_red !default;
+$secondary:     $theme_color_green!default;
+$tertiary:      $theme_color_blue !default;
+$quaternary:    $theme_color_gray;
+$quinary:       $theme_color_wafer;
+$senary:        $theme_color_green_spring;
+$septenary:     $theme_color_light_blue;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-900 !default;
+// scss-docs-end theme-color-variables
+
+$primaries-100: tint-color($primary, 80%) !default;
+$primaries-200: tint-color($primary, 60%) !default;
+$primaries-300: tint-color($primary, 40%) !default;
+$primaries-400: tint-color($primary, 20%) !default;
+$primaries-500: $primary !default;
+$primaries-600: shade-color($primary, 20%) !default;
+$primaries-700: shade-color($primary, 40%) !default;
+$primaries-800: shade-color($primary, 60%) !default;
+$primaries-900: shade-color($primary, 80%) !default;
+
+$primaries: (
+  "primary-100": $primaries-100,
+  "primary-200": $primaries-200,
+  "primary-300": $primaries-300,
+  "primary-400": $primaries-400,
+  "primary-500": $primaries-500,
+  "primary-600": $primaries-600,
+  "primary-700": $primaries-700,
+  "primary-800": $primaries-800,
+  "primary-900": $primaries-900
+) !default;
+
+$secondaries-100: tint-color($secondary, 80%) !default;
+$secondaries-200: tint-color($secondary, 60%) !default;
+$secondaries-300: tint-color($secondary, 40%) !default;
+$secondaries-400: tint-color($secondary, 20%) !default;
+$secondaries-500: $secondary !default;
+$secondaries-600: shade-color($secondary, 20%) !default;
+$secondaries-700: shade-color($secondary, 40%) !default;
+$secondaries-800: shade-color($secondary, 60%) !default;
+$secondaries-900: shade-color($secondary, 80%) !default;
+
+$secondaries: (
+  "secondary-100": $secondaries-100,
+  "secondary-200": $secondaries-200,
+  "secondary-300": $secondaries-300,
+  "secondary-400": $secondaries-400,
+  "secondary-500": $secondaries-500,
+  "secondary-600": $secondaries-600,
+  "secondary-700": $secondaries-700,
+  "secondary-800": $secondaries-800,
+  "secondary-900": $secondaries-900
+) !default;
+
+$tertiaries-100: tint-color($tertiary, 80%) !default;
+$tertiaries-200: tint-color($tertiary, 60%) !default;
+$tertiaries-300: tint-color($tertiary, 40%) !default;
+$tertiaries-400: tint-color($tertiary, 20%) !default;
+$tertiaries-500: $tertiary !default;
+$tertiaries-600: shade-color($tertiary, 20%) !default;
+$tertiaries-700: shade-color($tertiary, 40%) !default;
+$tertiaries-800: shade-color($tertiary, 60%) !default;
+$tertiaries-900: shade-color($tertiary, 80%) !default;
+
+$tertiaries: (
+  "tertiary-100": $tertiaries-100,
+  "tertiary-200": $tertiaries-200,
+  "tertiary-300": $tertiaries-300,
+  "tertiary-400": $tertiaries-400,
+  "tertiary-500": $tertiaries-500,
+  "tertiary-600": $tertiaries-600,
+  "tertiary-700": $tertiaries-700,
+  "tertiary-800": $tertiaries-800,
+  "tertiary-900": $tertiaries-900
+) !default;
+
+$quaternaries-100: tint-color($quaternary, 80%) !default;
+$quaternaries-200: tint-color($quaternary, 60%) !default;
+$quaternaries-300: tint-color($quaternary, 40%) !default;
+$quaternaries-400: tint-color($quaternary, 20%) !default;
+$quaternaries-500: $quaternary !default;
+$quaternaries-600: shade-color($quaternary, 20%) !default;
+$quaternaries-700: shade-color($quaternary, 40%) !default;
+$quaternaries-800: shade-color($quaternary, 60%) !default;
+$quaternaries-900: shade-color($quaternary, 80%) !default;
+
+$quaternaries: (
+  "quaternary-100": $quaternaries-100,
+  "quaternary-200": $quaternaries-200,
+  "quaternary-300": $quaternaries-300,
+  "quaternary-400": $quaternaries-400,
+  "quaternary-500": $quaternaries-500,
+  "quaternary-600": $quaternaries-600,
+  "quaternary-700": $quaternaries-700,
+  "quaternary-800": $quaternaries-800,
+  "quaternary-900": $quaternaries-900
+) !default;
+
+// scss-docs-start theme-colors-map
+$custom-colors: (
+  "primary":    	$primary,
+  "secondary":  	$secondary,
+  "tertiary":  	  $tertiary,
+  "quaternary":  	$quaternary,
+  "quinary":  	  $quinary,
+  "senary":  	    $senary,
+  "septenary":  	$septenary,
+  "success":    	$success,
+  "info":       	$info,
+  "warning":    	$warning,
+  "danger":     	$danger,
+  "light":      	$light,
+  "dark":       	$dark,
+  "red":       	  $red,
+  "orange":       $orange,
+  "yellow":       $yellow,
+  "green":       	$green
+) !default;
+
+$table-bg-scale: -80%;
+
+// scss-docs-start theme-colors-map
+$custom-table-colors: (
+  "primary":    shift-color($primary, $table-bg-scale),
+  "secondary":  shift-color($secondary, $table-bg-scale),
+  "tertiary":   shift-color($tertiary, $table-bg-scale),
+  "quaternary": shift-color($quaternary, $table-bg-scale),
+  "quinary":    shift-color($quinary, $table-bg-scale),
+  "senary":     shift-color($senary, $table-bg-scale),
+  "septenary":  shift-color($septenary, $table-bg-scale)
+) !default;
+// scss-docs-end theme-colors-map
+
+//Link color
+$link-color: $primary;
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-negative-margins:     true !default;
+
+$spacer: 1.5rem;
+
+// Forms
+
+$body-bg:                               $white;
+$prefix:                                bs-;
+
+// scss-docs-start form-input-variables
+
+$input-bg:                              var(--#{$prefix}white) !default;
+$input-disabled-bg:                     var(--#{$prefix}secondary-bg) !default;
+
+$input-color:                           var(--#{$prefix}white) !default;
+$input-border-color:                    var(--#{$prefix}primary) !default;
+
+$input-border-radius:                   var(--#{$prefix}border-radius) !default;
+$input-border-radius-sm:                var(--#{$prefix}border-radius-sm) !default;
+$input-border-radius-lg:                var(--#{$prefix}border-radius-lg) !default;
+
+$input-focus-bg:                        $input-bg !default;
+$input-focus-color:                     $input-color !default;
+
+$input-placeholder-color:               var(--#{$prefix}secondary-color) !default;
+$input-plaintext-color:                 var(--#{$prefix}primary) !default;

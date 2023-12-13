@@ -1,0 +1,82 @@
+$all-colors: map-merge-multiple($theme-colors, $custom-colors);
+$all-colors-test: map-merge-multiple($primaries, $secondaries, $tertiaries, $quaternaries, $blues, $indigos, $purples, $reds, $oranges, $yellows, $greens, $teals, $cyans);
+
+/*$utilities: map-merge(
+  $utilities,
+  (
+    "color": map-merge(
+      map-get($utilities, "color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "color"), "values"),
+          (
+            $all-colors-test
+          ),
+        ),
+      ),
+    ),
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "color": map-merge(
+      map-get($utilities, "color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "color"), "values"),
+          (
+            $all-colors
+          ),
+        ),
+      ),
+    ),
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "background-color": map-merge(
+      map-get($utilities, "background-color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "background-color"), "values"),
+          (
+            $all-colors-test
+          ),
+        ),
+      ),
+    ),
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "background-color": map-merge(
+      map-get($utilities, "background-color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "background-color"), "values"),
+          (
+            $all-colors
+          ),
+        ),
+      ),
+    ),
+  )
+);*/
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+
+$custom-ratios: (
+  "2x1": calc(2 / 1 * 100%),
+  "1x2": calc(1 / 2 * 100%)
+);
+
+
+$aspect-ratios: map-merge-multiple($aspect-ratios, $custom-ratios);

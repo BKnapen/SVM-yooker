@@ -1,0 +1,76 @@
+html, body{
+	height: 100%;
+}
+body{
+	font-family: 'PT Sans', sans-serif;
+	font-weight: 300;
+	color: $septenary;
+	background-color: $white;
+	font-size: 1rem;
+    line-height: 1.5;
+	.fs-small{
+		font-size: small;
+	}
+	.fs-smaller{
+		font-size: smaller;
+	}
+	.fs-x-small{
+		font-size: x-small;
+	}
+	.fs-xx-small{
+		font-size: xx-small;
+	}
+	.fs-large{
+		font-size: large;
+	}
+	.fs-larger{
+		font-size: larger;
+	}
+	.fs-x-larger{
+		font-size: x-large;
+	}
+	.fs-xx-large{
+		font-size: xx-large;
+	}
+}
+header{
+	&.before::before{
+		z-index: 6;
+    	content: "";
+    	display: block;
+    	position: absolute;
+    	top: 0;
+    	bottom: 0;
+    	left: 50%;
+    	-webkit-transform: translateX(-50%);
+    	-moz-transform: translateX(-50%);
+    	-ms-transform: translateX(-50%);
+    	transform: translateX(-50%);
+    	width: 100vw;
+    	z-index: 0;
+    	background: rgba(0, 0, 0, 0.1) linear-gradient(180deg, rgba(0, 0, 0, 0.75) 8.62%, rgba(0, 0, 0, 0.4) 17.92%);
+    	mix-blend-mode: multiply;
+	}
+}
+@for $i from 1 through 6 {
+  h#{$i} {
+	font-family: 'PT Sans', sans-serif;
+	font-weight: 700;
+	color: $primary;
+  }
+}
+footer{
+	@for $i from 1 through 6 {
+		h#{$i} {
+		  font-family: 'PT Sans', sans-serif;
+		  font-weight: 700;
+		  color: $white;
+		}
+	  }
+}
+a{
+	text-decoration: none;
+	&:hover{
+		color: $secondary;
+	}
+}

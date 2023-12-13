@@ -1,0 +1,100 @@
+//External Google fonts
+@import "external/google/fonts";
+
+//AOS
+@import "external/aos/aos";
+
+//External Boorstrap Functions
+@import "external/bootstrap/functions";
+
+//Variables
+@import "common/variables/variables";
+@import "external/bootstrap/variables";
+@import "external/bootstrap/variables-dark";
+
+//Mergers
+@import "common/mergers/mergers";
+
+//Map Mix and Utillities
+@import "external/bootstrap/maps";
+@import "external/bootstrap/mixins";
+@import "external/bootstrap/utilities";
+
+//$all-colors: map-merge-multiple($theme-colors, $custom-colors);
+$all-colors: map-merge-multiple($primaries, $secondaries, $tertiaries, $quaternaries, $blues, $indigos, $purples, $reds, $oranges, $yellows, $greens, $teals, $cyans);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "color": map-merge(
+      map-get($utilities, "color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "color"), "values"),
+          (
+            $all-colors
+          ),
+        ),
+      ),
+    ),
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "background-color": map-merge(
+      map-get($utilities, "background-color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "background-color"), "values"),
+          (
+            $all-colors
+          ),
+        ),
+      ),
+    ),
+  )
+);
+
+@import "external/bootstrap/utilities/api";
+
+//Bootstrap
+@import "external/bootstrap/bootstrap";
+
+//Globals
+@import "common/global/globals";
+
+//Typography
+@import "common/global/typography";
+
+//Navbar
+@import "common/styling/navbar/navbar";
+
+//Menu
+@import "common/styling/menu/menu";
+
+//Table
+@import "common/styling/table/table";
+
+//Common Helpers
+@import "common/helpers/background-images";
+
+//Common Utilities
+@import "common/utilities/utilities";
+@import "common/utilities/gallerylightbox";
+
+//Wordpress editor
+@import "common/editor/editor";
+
+//External Fontawesome
+@import "external/fontawesome/fontawesome";
+@import "external/fontawesome/solid";
+@import "external/fontawesome/regular";
+@import "external/fontawesome/brands";
+
+//@import "common/components/images";
+//@import "common/components/blockquote";
+//@import "common/components/slider";
+//@import "common/components/cite";
+//@import "common/components/figure";

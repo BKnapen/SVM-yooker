@@ -1,0 +1,17 @@
+@for $i from 20 through 100 {
+  	@if $i % 10 == 0 {
+    	$percentage: $i*1%;
+    	.bg-primary-darken-#{$i} {
+      		background-color: darken($primary, $percentage) !important;
+    	}
+    	.bg-primary-lighten-#{$i} {
+      		background-color: lighten($primary, $percentage) !important;
+    	}
+    	.bg-primary-mix-black-#{$i} {
+     		 background-color: mix(black, $primary, $percentage) !important;
+    	}
+    	.bg-primary-mix-white-#{$i} {
+    		background-color: mix(white, $primary, $percentage) !important;
+    	}
+  	}
+}

@@ -1,0 +1,38 @@
+body{
+	.wp-site-blocks{
+		.entry-content{
+			blockquote{
+				&::before{
+					content: '\f10e';
+					font-weight: 900;
+					display: block;
+					position: absolute;
+					left: .75rem;
+					top: -2rem;
+					font-family: "Font Awesome 6 Free";
+					font-size: 5rem;
+					color: $white;
+				}
+			}
+		}
+		.text-inline-transparent-bg-primary-wrapper{
+			padding-left: 1rem;
+			.text-inline-transparent-bg-primary{
+				&::before{
+					content: "";
+					position: absolute;
+					top: 0em;
+					right: 100%;
+					bottom: 0;
+					width: 1rem;
+					background-color: rgba($secondary, 0.5);
+				}
+				position: relative;
+				line-height: normal;
+				white-space: pre-wrap;
+				background-color: rgba($secondary, 0.5);
+				padding-right: 1rem;
+			}
+		}
+	}
+}

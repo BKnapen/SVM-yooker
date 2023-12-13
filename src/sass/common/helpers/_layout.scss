@@ -1,0 +1,18 @@
+@for $i from 1 through 10 {
+	$width: $i*100;
+	@include media-breakpoint-up(lg) { 
+		.w-lg-#{$width}{
+			width: #{$width}px !important;
+		}
+	}
+	@include media-breakpoint-up(xl) { 
+		.w-xl-#{$width}{
+			width: #{$width}px !important;
+		}
+	}
+	@include media-breakpoint-up(xxl) { 
+		.w-xxl-#{$width}{
+			width: #{$width}px !important;
+		}
+	}
+}

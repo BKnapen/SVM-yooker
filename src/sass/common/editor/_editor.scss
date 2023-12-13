@@ -1,0 +1,56 @@
+.edit-post-visual-editor__post-title-wrapper{
+    > :where(:not(.alignleft):not(.alignright):not(.alignfull)){
+        max-width: none !important;
+    }
+}
+.block-editor-block-list__layout.is-root-container{
+    > :where(:not(.alignleft):not(.alignright):not(.alignfull)){
+        max-width: none !important;
+    }
+}
+.edit-post-visual-editor{
+	.card {
+    	max-width: unset;
+	}
+	section{
+		@extend .pt-0;
+		@extend .pb-0;
+	}
+}
+.edit-post-sidebar{
+	@for $i from 1 through 6 {
+		h#{$i} {
+			font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+			font-size: 13px;
+			line-height: 1.4em;
+		}
+	}
+	span{
+		font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    	font-size: 13px;
+    	line-height: 1.4em;
+	}
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-size: 13px;
+    line-height: 1.4em;
+}
+.components-responsive-wrapper{
+    width: 100%;
+}
+.components-button {
+    align-items: center;
+    -webkit-appearance: none;
+    background: none;
+    border: 0;
+    box-sizing: border-box;
+    color: var(--wp-components-color-foreground,#1e1e1e);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0;
+    padding: 6px 12px;
+    text-decoration: none;
+    transition: box-shadow .1s linear;
+}

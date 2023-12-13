@@ -1,0 +1,165 @@
+//External Google fonts
+@import "external/google/fonts";
+
+//AOS
+@import "external/aos/aos";
+
+//External Boorstrap Functions
+@import "external/bootstrap/functions";
+
+//Variables
+@import "common/variables/editorvariables";
+@import "external/bootstrap/variables";
+@import "external/bootstrap/variables-dark";
+
+//Mergers
+@import "common/mergers/mergers";
+
+//Map Mix and Utillities
+@import "external/bootstrap/maps";
+@import "external/bootstrap/mixins";
+@import "external/bootstrap/utilities";
+
+//$all-colors: map-merge-multiple($theme-colors, $custom-colors);
+$all-colors: map-merge-multiple($primaries, $secondaries, $tertiaries, $quaternaries, $blues, $indigos, $purples, $reds, $oranges, $yellows, $greens, $teals, $cyans);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "color": map-merge(
+      map-get($utilities, "color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "color"), "values"),
+          (
+            $all-colors
+          ),
+        ),
+      ),
+    ),
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "background-color": map-merge(
+      map-get($utilities, "background-color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "background-color"), "values"),
+          (
+            $all-colors
+          ),
+        ),
+      ),
+    ),
+  )
+);
+
+@import "external/bootstrap/utilities/api";
+
+//Bootstrap
+@import "external/bootstrap/bootstrap";
+
+#wpwrap {
+	color: #3c434a;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+	font-size: 13px;
+	line-height: 1.4em;
+}
+html :where(.wp-block){
+	max-width: none;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: unset;
+	margin-right: unset;
+}
+.interface-navigable-region{
+	//External Fontawesome
+	@import "external/fontawesome/fontawesome";
+	@import "external/fontawesome/solid";
+	@import "external/fontawesome/regular";
+	@import "external/fontawesome/brands";
+}
+.edit-post-visual-editor, .editor-styles-wrapper{
+
+
+	//External Google fonts
+	@import "external/google/fonts";
+	
+	//Editor
+	@import "common/editor/editor";
+	
+	//External Boorstrap Functions
+	@import "external/bootstrap/functions";
+
+	//Variables
+	@import "common/variables/editorvariables";
+	@import "external/bootstrap/variables";
+	@import "external/bootstrap/variables-dark";
+
+	//Map Mix and Utillities
+	@import "external/bootstrap/maps";
+	@import "external/bootstrap/mixins";
+	@import "external/bootstrap/utilities";
+
+	//Mergers
+	@import "common/mergers/mergers";
+
+	//Bootstrap
+	@import "external/bootstrap/bootstrap";
+
+	//Globals
+	@import "common/global/editorglobals";
+
+	//Typography
+	@import "common/global/typography";
+
+	//Navbar
+	@import "common/styling/navbar/navbar";
+
+	//Menu
+	@import "common/styling/menu/menu";
+
+	//Table
+	@import "common/styling/table/table";
+
+	//Common Helpers
+	@import "common/helpers/background-images";
+
+	//Common Utilities
+	@import "common/utilities/utilities";
+
+	@import "common/utilities/utilities";
+
+	//Helpers
+	@import "common/helpers/background-images";
+
+	//External Fontawesome
+	@import "external/fontawesome/fontawesome";
+	@import "external/fontawesome/solid";
+	@import "external/fontawesome/regular";
+	@import "external/fontawesome/brands";
+	
+	
+	background-color: $white;
+
+	[data-type^="webkompanen-blocks/"]{
+		p{
+			color: $secondary;
+			font-family: 'PT Sans', sans-serif;
+			font-weight: 300;
+			font-size: 1rem;
+			line-height: 1.5;
+		}
+	}
+	
+	[data-type^="webkompanen-blocks/"] a{
+		color: $secondary;
+	}
+	.navbar-nav{
+		margin-left: unset;
+		margin-right: unset;
+	}
+}
